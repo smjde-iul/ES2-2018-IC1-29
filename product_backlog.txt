@@ -1,0 +1,2 @@
+GUI (teste)
+1. Só pode haver 2 utilizadores
