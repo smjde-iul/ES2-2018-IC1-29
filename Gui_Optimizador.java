@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -8,7 +9,7 @@ import javax.swing.JTextField;
 public class Gui_Optimizador {
 
 	JFrame frame = new JFrame();
-	JButton botaoInicia = new JButton();
+	JButton botaoIniciaOptimizacao = new JButton();
 	JPanel painelBotoes = new JPanel();
 	JTextField texto = new JTextField();
 
@@ -23,7 +24,8 @@ public class Gui_Optimizador {
 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocation(50, 50);
-		frame.setSize(500, 500);
+		frame.setPreferredSize(new Dimension(600, 400));
+		frame.pack();
 
 
 	}
