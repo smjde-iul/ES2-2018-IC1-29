@@ -1,5 +1,8 @@
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.DisplayMode;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -9,7 +12,7 @@ import javax.swing.JTextField;
 
 public class Gui_Optimizador {
 
-	
+
 	JFrame frame = new JFrame();
 	JButton botaoIniciaOptimizacao = new JButton();
 	JPanel painelBotoes = new JPanel();
@@ -21,9 +24,9 @@ public class Gui_Optimizador {
 
 	//Definir a interface Gráfica com o utilizador
 	public Gui_Optimizador() {
-		
+
 		frame.setName("Optimizer");
-		
+
 		addContent();
 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -33,12 +36,12 @@ public class Gui_Optimizador {
 		frame.pack();
 
 	}
-	
-	
+
+
 	public void open() {
 		frame.setVisible(true);
 	}
-	
+
 	public void addContent() {
 		nomeProblema.setText("Introduza o nome do problema.");
 		botaoIniciaOptimizacao.setText("Start!");
@@ -49,7 +52,20 @@ public class Gui_Optimizador {
 		frame.add(painelNomeProblema, BorderLayout.NORTH);
 		frame.add(painelBotoes, BorderLayout.SOUTH);
 		frame.add(painelDescricaoProblema, BorderLayout.WEST);
-		
+
+
+
+		botaoIniciaOptimizacao.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				System.out.println("Touched!");
+				System.exit(0);
+				
+			}
+		});
+
 	}
 
 
